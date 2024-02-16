@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Job Details</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            background: linear-gradient(to right, SlateBlue, violet);
+            height: 100vh;
+        }
+        
+        
+        
+         /* *{
+         margin:0;
+         padding: 0;
+         outline: 0;
+        } */
+        table.my-table-class .odd:hover td {
+        background-color: slateblue;
+        color: white;
+    }
+    table.my-table-class .even:hover td {
+        background-color: violet;
+        color: white;
+    }
+    #text3{
+        height: 50px;
+        width: 100%;
+        border-radius: 25px;
+        border:none;
+        font-family: Montserrat-Bold;
+        font-size: 15px;
+        line-height: 1.5;
+        color: #fff;
+        text-transform: uppercase;
+        border-radius: 15px;
+        background: #d436d4;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 25px;
+    }
+    #text1{
+        height: 50px;
+        width: 100%;
+        border-radius: 25px;
+        border:none;
+        font-family: Montserrat-Bold;
+        font-size: 15px;
+        line-height: 1.5;
+        color: #fff;
+        text-transform: uppercase;
+        border-radius: 15px;
+        background: #1370cc;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 25px;
+    }
+    a{
+        text-decoration: none;
+    }
+        
+        .table-container{
+            margin-top: 40px;
+            left: 70%;
+            top:50%;
+            border-radius: 10px !important;
+            
+         /* position: ;
+         z-index: 2;
+         left: 50%;
+         top: 50%; */
+         /* transform: translate(-50%,-50%);
+         width: 80%; 
+         border-collapse: collapse;
+         border-spacing: 0;
+         box-shadow: 0 2px 15px rgba(64,64,64,.7);
+         border-radius: 20px; */
+         overflow: auto;
+
+        
+        }
+        .my-table{
+            border-radius: 10px;
+        }
+        table{
+            margin-left: 10%;
+            margin-right:10%;
+            width: 80%;
+            border-collapse: collapse;
+            border-spacing: -10%;
+            box-shadow: 0 2px 15px rgba(64,64,64,.7);
+        }
+        td , th{
+         padding: 10px 20px;
+         text-align: center;
+         border-collapse: separate;
+         border: 1px solid rgba(255,255,255,0.35);
+         border-width: 1px;
+         border-image: linear-gradient(to right, slateblue, violet);
+        border-image-slice: 2; 
+        }
+        th{
+            height: 75px;
+         background-color: #57b846;
+         color: #fafafa;
+         font-family: 'Open Sans',Sans-serif;
+         font-weight: 200;
+         text-transform: uppercase;
+        
+        }
+        tr{
+         width: 100%;
+         background-color: #fafafa;
+         font-family: 'Montserrat', sans-serif;
+        }
+        tr:nth-child(odd){
+        background-color:#E8E8E8;
+        }
+        tr:nth-child(even):hover{
+            background-color:SlateBlue;
+        }
+        tr:nth-child(odd):hover{
+            background-color:violet;
+        }
+         </style>
+</head>
+<body>
+    <!-- style="margin-top: 10%;" -->
+
+<div class="table-container">
+<div class="my-table">
+<table class="my-table-class">
+        <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Location</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Link</th></tr>
+        {% for key,value in item.items() %}
+        {% if value!='-' %}
+        {% if key%2==0 %}
+        <tr class="odd">
+            <td>{{ value.Name }}</td>
+            <td>{{ value.Location }}</td>
+            <td>{{ value.Salary }}</td>
+            <td><a type="button" href="{{ value.Link }}" target="_blank"><button id="text1">click here</button></a></td>
+        </tr>
+        {% else %}
+        <tr class="even">
+        <td>{{ value.Name }}</td>
+            <td>{{ value.Location }}</td>
+            <td>{{ value.Salary }}</td>
+            <td><a type="button" href="{{ value.Link }}" target="_blank"><button id="text3">click here</button></a></td></tr>
+        {% endif %}
+        {% endif %}
+        {% endfor %}  
+</table>
+</div>
+</div>
+</body>
+</html>

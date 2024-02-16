@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>Skill Crawler</title>
+        <style>
+            body{
+                background-image: linear-gradient(to right, SlateBlue , violet);
+            }
+             label {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+    }
+    h1 {
+  font-size: 30px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+    
+    .non_form{
+        margin: 150px 270px;
+        padding: 15px;
+        border-radius: 25px;
+        border: 3px solid rgb(172, 169, 175);
+        background-color : rgb(255,255,255);
+    }
+    #text{
+        font-size: large;
+        background-color: white;
+    }
+    
+    #text1 {
+    background-color: white;
+    margin:0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    border: gray 1px dashed !important;
+    border-radius: 7px;
+    }
+    .center-form{
+        justify-content: center;
+        display: block;
+        margin: 5%;
+        padding: 0px;
+        border-radius: 25px;
+        background-color : rgb(255,255,255);
+        
+    }
+    #text2{
+        height: 5%;
+        width: 85%;
+        border-radius: 25px;
+        background-color:rgb(87, 184, 70);
+        border:none;
+        font-family: Montserrat-Bold;
+        font-size: 20px;
+        line-height: 1.5;
+        color: #fff;
+        text-transform: uppercase;
+        width: 100%;
+        height: 50px;
+        border-radius: 25px;
+        background: #57b846;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 25px;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+    }
+
+        </style>
+    </head>
+<body>
+    <div class="non_form">
+    <div class="center-form" style="background-color: white;">
+    <h1 align="center" style="color:#c850c0;">Resume Parser</h1>
+    <form action="http://localhost:5000/upload" method="POST" enctype="multipart/form-data" style="justify-content:center;">
+        <label for="text_area_div" style="color: rgb(69, 64, 116);" id="text"> Upload Resume </label><br><br>
+        <input type="file" name="file" accept=".pdf,.doc,.docx" id="text1" cols="30" rows="4"><br><br>
+        <input type="submit" value="PARSE RESUME" id="text2">
+    </form>
+    <p class="cen100" style="color:#c850c0; margin-bottom: 20px;">
+        ATS resume templates are pre-designed formats for resumes or CVs that are optimized for Applicant Tracking Systems. They incorporate features such as simple design, standard fonts...<a href="https://in.topresume.com/career-advice/what-is-an-ats-resume" target="_blank">show more</a>
+
+</p>
+    <p class="cen100" style="color:#c850c0; margin-bottom: 20px;">
+        A resume parser is a software tool that extracts data from a resume or CV. This parser extract information such as the candidate's name, contact information,email, education, work experience, skills.
+    </p>
+    </div>
+    <div>
+</body>
+</html>
